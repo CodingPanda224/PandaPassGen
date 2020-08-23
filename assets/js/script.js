@@ -29,8 +29,8 @@ function generatePassword(){
   var passLength = window.prompt("How long do you want your password to be? \n Please choose between 8 and 128.")
   var hasLower = window.confirm("Include lowercase letters?");
   var hasUpper = window.confirm("Include uppercase letters?");
-  var hasNum = window.confirm("Include numbers letters?");
-  var hasSym = window.confirm("Include symbols letters?");
+  var hasNum = window.confirm("Include numbers?");
+  var hasSym = window.confirm("Include symbols?");
   
     //check console
   console.log(passLength);
