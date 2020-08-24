@@ -27,6 +27,10 @@ var randomPasswordGenerated = "";
 function generatePassword(){
   //promp user to select criteria and store as variables
   var passLength = window.prompt("How long do you want your password to be? \n Please choose between 8 and 128.")
+  if(passLength < 8 || passLength > 128){
+    passLength = window.prompt("Your password is out of range. \n Please choose a number between 8 and 128.")
+  }
+
   var hasLower = window.confirm("Include lowercase letters?");
   var hasUpper = window.confirm("Include uppercase letters?");
   var hasNum = window.confirm("Include numbers?");
@@ -36,7 +40,7 @@ function generatePassword(){
   var num = "no";
   var sym = "no";
  
-  
+  //Used to inform user of choice later on
   if(hasLower===true)
     lower = "yes";
     if(hasUpper===true)
@@ -46,6 +50,8 @@ function generatePassword(){
     if(hasSym===true)
     sym = "yes";
 
+
+    //Confirm chosen criteria
   window.alert("You have selected: " + "\r\n" + "Password Length = " + passLength + "\r\n" + "Lowercase Letters: " + lower + "\r\n" + "Uppercase Letters: " + upper + "\r\n" + "Numberic Characters: " + num + "\r\n" + "Symbols: " + sym )
   
     //check console
