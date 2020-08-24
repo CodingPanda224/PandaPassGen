@@ -31,6 +31,22 @@ function generatePassword(){
   var hasUpper = window.confirm("Include uppercase letters?");
   var hasNum = window.confirm("Include numbers?");
   var hasSym = window.confirm("Include symbols?");
+  var lower = "no";
+  var upper = "no";
+  var num = "no";
+  var sym = "no";
+ 
+  
+  if(hasLower===true)
+    lower = "yes";
+    if(hasUpper===true)
+    upper = "yes";
+    if(hasNum===true)
+    num = "yes";
+    if(hasSym===true)
+    sym = "yes";
+
+  window.alert("You have selected: " + "\r\n" + "Password Length = " + passLength + "\r\n" + "Lowercase Letters: " + lower + "\r\n" + "Uppercase Letters: " + upper + "\r\n" + "Numberic Characters: " + num + "\r\n" + "Symbols: " + sym )
   
     //check console
   console.log(passLength);
